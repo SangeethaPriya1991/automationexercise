@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="5" failed="3" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-07T22:06:49 IST" name="Default suite" finished-at="2025-06-07T22:07:16 IST" duration-ms="26462">
+    <groups>
+    </groups>
+    <test started-at="2025-06-07T22:06:49 IST" name="Default test" finished-at="2025-06-07T22:07:16 IST" duration-ms="26462">
+      <class name="NewOrderPlace">
+        <test-method is-config="true" signature="set()[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:06:50 IST" name="set" finished-at="2025-06-07T22:06:58 IST" duration-ms="8154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set -->
+        <test-method signature="Loinpage()[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:06:58 IST" name="Loinpage" finished-at="2025-06-07T22:06:58 IST" duration-ms="750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loinpage -->
+        <test-method signature="LogintoAccount(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:06:59 IST" name="LogintoAccount" data-provider="Logindata" finished-at="2025-06-07T22:07:03 IST" depends-on-methods="NewOrderPlace.Loinpage" duration-ms="4239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sarah@example.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sarah123#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogintoAccount -->
+        <test-method signature="AddtoCart(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:03 IST" name="AddtoCart" data-provider="ItemName" finished-at="2025-06-07T22:07:06 IST" depends-on-methods="NewOrderPlace.LogintoAccount" duration-ms="3157" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Stylish Dress]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddtoCart -->
+        <test-method signature="AddtoCart(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:06 IST" name="AddtoCart" data-provider="ItemName" finished-at="2025-06-07T22:07:09 IST" depends-on-methods="NewOrderPlace.LogintoAccount" duration-ms="2936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sleeves Printed Top - White]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddtoCart -->
+        <test-method signature="AddtoCart(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:09 IST" name="AddtoCart" data-provider="ItemName" finished-at="2025-06-07T22:07:12 IST" depends-on-methods="NewOrderPlace.LogintoAccount" duration-ms="3071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Frozen Tops For Kids]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddtoCart -->
+        <test-method signature="checkout(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:12 IST" name="checkout" data-provider="ItemName" finished-at="2025-06-07T22:07:13 IST" depends-on-methods="NewOrderPlace.AddtoCart" duration-ms="1306" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Stylish Dress]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Stylish Dress not found in cart]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Stylish Dress not found in cart
+at org.testng.Assert.fail(Assert.java:111)
+at NewOrderPlace.checkout(NewOrderPlace.java:150)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method signature="checkout(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:13 IST" name="checkout" data-provider="ItemName" finished-at="2025-06-07T22:07:15 IST" depends-on-methods="NewOrderPlace.AddtoCart" duration-ms="1310" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sleeves Printed Top - White]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Sleeves Printed Top - White not found in cart]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Sleeves Printed Top - White not found in cart
+at org.testng.Assert.fail(Assert.java:111)
+at NewOrderPlace.checkout(NewOrderPlace.java:150)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method signature="checkout(java.lang.String,java.lang.String)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:15 IST" name="checkout" data-provider="ItemName" finished-at="2025-06-07T22:07:16 IST" depends-on-methods="NewOrderPlace.AddtoCart" duration-ms="1376" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Frozen Tops For Kids]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Frozen Tops For Kids not found in cart]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Frozen Tops For Kids not found in cart
+at org.testng.Assert.fail(Assert.java:111)
+at NewOrderPlace.checkout(NewOrderPlace.java:150)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method signature="payment(Models.UserSignUp)[pri:0, instance:NewOrderPlace@47af7f3d]" started-at="2025-06-07T22:07:16 IST" name="payment" finished-at="2025-06-07T22:07:16 IST" depends-on-methods="NewOrderPlace.checkout" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method NewOrderPlace.payment() on instance NewOrderPlace@47af7f3d depends on not successfully finished methods 
+[NewOrderPlace.checkout() on instance NewOrderPlace@47af7f3d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method NewOrderPlace.payment() on instance NewOrderPlace@47af7f3d depends on not successfully finished methods 
+[NewOrderPlace.checkout() on instance NewOrderPlace@47af7f3d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payment -->
+      </class> <!-- NewOrderPlace -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
