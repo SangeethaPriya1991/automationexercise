@@ -17,6 +17,7 @@ public class TestDataProvider {
 		new Object[][] { { "Sarah", "Sarah@example.com" }
 				// {"user2", "user2@example.com"},
 				// {"user3", "user3@example.com"}
+		//
 		};
 	}
 
