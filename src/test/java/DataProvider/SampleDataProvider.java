@@ -7,14 +7,13 @@ import java.util.List;
 import java.util.Random;
 import Models.*;
 
-public class TestDataProvider {
+public class SampleDataProvider {
 
 	@DataProvider(name = "signupData")
 	public static Object[][] getUserData() {
 		return
-		// new Object[][] { { "Sarah", String.format("sarah%d@example.com", new
-		// Random().nextInt(1000))},
-		new Object[][] { { "Sarah", "Sarah@example.com" }
+		new Object[][] { { "Nathan", String.format("nathan%d@example.com", new Random().nextInt(1000))},
+		//new Object[][] { { "Sarah", "Sarah@example.com" }
 				// {"user2", "user2@example.com"},
 				// {"user3", "user3@example.com"}
 		//
