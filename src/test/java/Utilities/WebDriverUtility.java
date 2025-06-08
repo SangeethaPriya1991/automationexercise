@@ -1,3 +1,4 @@
+package Utilities;
 
 import java.util.List;
 
@@ -7,11 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class Utilities {
+public class WebDriverUtility {
 
 	WebDriver driver;
 
-	public Utilities(WebDriver driver) {
+	public WebDriverUtility(WebDriver driver) {
 		this.driver = driver;
 	}
 	

@@ -17,4 +17,5 @@ buildNumber.properties
 .classpath
 test-output/
 .settings/
+target/
 

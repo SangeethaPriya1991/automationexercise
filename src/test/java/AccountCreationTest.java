@@ -11,16 +11,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import net.bytebuddy.asm.Advice.Enter;
-import DataProvider.TestDataProvider;
+import DataProvider.SampleDataProvider;
 import Models.UserSignUp;
+import Utilities.WebDriverUtility;
 
-public class AccountCreation {
+public class AccountCreationTest {
 
 	WebDriver driver;
 	UserSignUp signUp;
-	Utilities utility;
+	WebDriverUtility utility;
 
-	public AccountCreation() {
+	public AccountCreationTest() {
 
 		signUp = new UserSignUp();
 
@@ -32,7 +33,7 @@ public class AccountCreation {
 		System.setProperty("Webdriver.Edge.driver", "C:\\Sangeetha\\Driver\\edgedriver_win64\\msedgedriver.exe");
 		driver = new EdgeDriver();
 		driver.get("https://automationexercise.com/");
-		utility = new Utilities(driver);
+		utility = new WebDriverUtility(driver);
 	}
 
 	@Test
@@ -46,7 +47,7 @@ public class AccountCreation {
 		Assert.assertEquals(loginkeyword, "login", "Keyword does not match");
 	}
 
-	@Test(dependsOnMethods = "NavigatetoSignup", dataProvider = "signupData", dataProviderClass = TestDataProvider.class)
+	@Test(dependsOnMethods = "NavigatetoSignup", dataProvider = "signupData", dataProviderClass = SampleDataProvider.class)
 	public void Signuppage(String name, String email) {
 		
 		// Enter Email Address
@@ -73,7 +74,7 @@ public class AccountCreation {
 
 	}
 
-	@Test(dependsOnMethods = "Signuppage", dataProvider = "account_information", dataProviderClass = TestDataProvider.class)
+	@Test(dependsOnMethods = "Signuppage", dataProvider = "account_information", dataProviderClass = SampleDataProvider.class)
 	public void AccountInformationpage(UserSignUp accountInfo) {
 		
 		// Select Title
