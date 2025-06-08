@@ -127,9 +127,9 @@ Place the msedgedriver.exe in a known folder (e.g., C:\Sangeetha\Driver\edgedriv
 If you want to use a different path, update the path in the test classes (System.setProperty("Webdriver.Edge.driver", "your/path/to/msedgedriver.exe");).
 
 ### 4. Run tests
-     ```sh
-     mvn test
-     ```
+```sh
+mvn test
+```
 Test output and results will be visible in the console and target/surefire-reports directory.
 
 ### 5. Customizing Test Data
