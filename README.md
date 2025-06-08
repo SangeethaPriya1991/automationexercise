@@ -53,8 +53,27 @@ A helper class with generic methods for:
 - **Java**: Main programming language
 - **Selenium WebDriver**: Browser automation
 - **TestNG**: Test management and execution
-- **Maven**: Dependency management
+- **Maven**: Dependency management 
 
+---
+
+## 🗄️ Project Structure
+
+```plaintext
+automationexercise/
+├── .gitattributes
+├── .gitignore
+├── pom.xml
+└── src/
+    └── test/
+        └── java/
+            ├── AccountCreation.java
+            ├── AccountInfo.java
+            ├── NewOrderPlace.java
+            ├── Utilities.java
+            ├── DataProvider/
+            └── Models/
+```
 ---
 
 ## 🔄 Typical Automated Workflow
